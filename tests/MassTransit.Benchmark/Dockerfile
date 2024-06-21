@@ -7,6 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 COPY ["Directory.Build.props", "."]
+COPY ["Directory.Packages.props", "."]
 COPY ["signing.props", "."]
 COPY ["MassTransit.snk", "."]
 COPY ["src/", "src/"]
