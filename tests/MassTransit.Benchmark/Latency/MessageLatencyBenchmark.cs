@@ -38,6 +38,9 @@
             IReportConsumerMetric report = _capture;
 
             await _transport.Start(ConfigureReceiveEndpoint, report);
+            // wait for 3 seconds - add debug output
+            Console.WriteLine("Waiting for 5 seconds");
+            await Task.Delay(5000);
             try
             {
                 Console.WriteLine("Running Message Latency Benchmark");
